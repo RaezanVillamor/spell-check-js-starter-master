@@ -100,9 +100,20 @@ function ch1Binary() {
 // Output to the console every word that is not found in the dictionary array.
 // Output a total count of words not found in the dictionary in the paragraph with the id 'full-result'
 function fullLinear() {
-  // **********************************
-  // * YOUR CODE HERE...
-  // **********************************
+//Initialize count to 0
+let count = 0;
+
+for(let i = 0; i < aliceWordsFull.length ; i++) {
+  let lower = aliceWordsFull[i].toLowerCase;
+
+  let search = linearSearch(dictionary, lower);
+  if(search == -1) {
+    count++
+    console.log(lower);
+    document.getElementById('full-result').innerHTML = count + "words were not in the dictionary";
+  }
+}
+
 }
 
 // FULL BINARY FUNCTION CRITERIA
@@ -110,7 +121,16 @@ function fullLinear() {
 // Output to the console every word that is not found in the dictionary array.
 // Output a total count of words not found in the dictionary in the paragraph with the id 'full-result'
 function fullBinary() {
-  // **********************************
-  // * YOUR CODE HERE...
-  // **********************************
+  let count = 0;
+
+  for(let i = 0; i < aliceWordsFull.length ; i++) {
+    let lower = aliceWordsFull[i].toLowerCase;
+  
+    let search = binarySearch(dictionary, lower);
+    if(search == -1) {
+      count++
+      console.log(lower);
+      document.getElementById('full-result').innerHTML = count + "words were not in the dictionary";
+    }
+  }
 }
