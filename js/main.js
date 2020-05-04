@@ -104,7 +104,7 @@ function fullLinear() {
 let count = 0;
 
 for(let i = 0; i < aliceWordsFull.length ; i++) {
-  let lower = aliceWordsFull[i].toLowerCase;
+  let lower = aliceWordsFull[i].toLowerCase();
 
   let search = linearSearch(dictionary, lower);
   if(search == -1) {
@@ -124,7 +124,7 @@ function fullBinary() {
   let count = 0;
 
   for(let i = 0; i < aliceWordsFull.length ; i++) {
-    let lower = aliceWordsFull[i].toLowerCase;
+    let lower = aliceWordsFull[i].toLowerCase();
   
     let search = binarySearch(dictionary, lower);
     if(search == -1) {
