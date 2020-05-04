@@ -24,9 +24,9 @@ function binarySearch(anArray, item) {
        if (item == anArray[middleIndex]) {
            return middleIndex;
        } else if (item < anArray[middleIndex]) {
-           let upperIndex = middleIndex -1;
+            upperIndex = middleIndex -1;
        } else {
-           lowerIndex =middleIndex + 1;
+           lowerIndex = middleIndex + 1;
        }
    } //No item found
    return -1;
